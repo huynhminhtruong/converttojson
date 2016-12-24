@@ -1,2 +1,2 @@
-# converttojson
-Convert any format of files to JSON
+# Learning ReactJS
+Learning ReactJS as client render.
