@@ -8,4 +8,16 @@ class MyComponent extends React.Component {
 	}
 }
 
-export default MyComponent
+class App extends React.Component {
+	render() {
+		return (
+			<div>
+				<MyComponent name="Michael" />
+				<MyComponent name="Ryan" />
+				<MyComponent name="React" />
+			</div>
+		)
+	}
+}
+
+export default App

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import Form from './Form';
 import MyComponent from './MyComponent';
+import StateAndLifecycle from './StateAndLifecycle';
 import './index.css';
 
 ReactDOM.render(
@@ -12,10 +13,15 @@ ReactDOM.render(
 
 ReactDOM.render(
 	<Form />,
-	document.getElementById('f1')
+	document.getElementById('form')
 );
 
 ReactDOM.render(
-	<MyComponent name="reactjs developer" />,
-	document.getElementById('state')
+	<MyComponent />,
+	document.getElementById('mycomponent')
+);
+
+ReactDOM.render(
+	<StateAndLifecycle />,
+	document.getElementById('stateandlifecycle')
 );
