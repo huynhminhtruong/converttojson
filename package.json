@@ -2,9 +2,9 @@
   "name": "nodejs-reactjs",
   "version": "1.0.0",
   "description": "Learning ReactJS and React-Native",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
-    "server": "node server",
+    "server": "nodemon server",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
@@ -31,6 +31,17 @@
     "request-promise": "^4.1.1",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "react-router": "^3.0.0"
+    "react-router": "^3.0.0",
+    "bluebird": "^3.4.6",
+    "consolidate": "^0.14.1",
+    "cookie-parser": "^1.4.3",
+    "facebook-chat-api": "^1.2.0",
+    "multer": "^1.2.0",
+    "needle": "^1.4.2",
+    "nodemon": "^1.11.0",
+    "path": "^0.12.7",
+    "requirejs": "^2.3.2",
+    "routes": "^2.1.0",
+    "swig": "^1.4.2"
   }
 }

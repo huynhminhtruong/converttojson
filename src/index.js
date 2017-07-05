@@ -4,6 +4,7 @@ import App from './App';
 import Form from './Form';
 import MyComponent from './MyComponent';
 import StateAndLifecycle from './StateAndLifecycle';
+import HandleEvents from './HandleEvents';
 import './index.css';
 
 ReactDOM.render(
@@ -14,6 +15,11 @@ ReactDOM.render(
 ReactDOM.render(
 	<Form />,
 	document.getElementById('form')
+);
+
+ReactDOM.render(
+	<HandleEvents />,
+	document.getElementById('event')
 );
 
 ReactDOM.render(

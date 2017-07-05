@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-angularjs-style",
+  "description": "Practice AngularJS in NodeJS",
+  "main": "app.js",
+  "authors": [
+    "TruongHM"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "nodejs",
+    "angularjs",
+    "backend",
+    "as",
+    "service"
+  ],
+  "homepage": "https://github.com/huynhminhtruong/nodejs-angularjs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
