@@ -1,3 +1,3 @@
 $(document).ready(function() {
-	alert('loading home page');
+	console.log('loading home page');
 });

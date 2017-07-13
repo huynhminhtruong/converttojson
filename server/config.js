@@ -8,14 +8,14 @@ integration = require('../config/integration')
 config = require('../config/development')
 
 module.exports = function(app) {
-	mongoose.connect(config.database, (e, db) => {
+	mongoose.connect(config.database.project, (e, db) => {
 		if (e) console.log(e)
-		console.log('On Connect: ', db)
+		console.log('On Connect: ', __dirname)
 	})
 	app.use(cookieParser())
 	app.use(bodyParser.json())
 	app.use(bodyParser.urlencoded({ extended: false }))
-	app.set('views', path.join(__dirname, 'views'))
+	app.set('views', path.join(__dirname, './views'))
 	app.use(function(req, res, next) {
 	    res.header('Access-Control-Allow-Origin', '*')
 	    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS')
@@ -25,4 +25,5 @@ module.exports = function(app) {
 	})
 	app.use(express.static(path.join(__dirname, '../public')))
 	app.use(express.static(path.join(__dirname, '../bower_components')))
+	app.use(express.static(path.join(__dirname, '../src')))
 }
