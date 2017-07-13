@@ -3,21 +3,20 @@ dbquery = require('../databasequeries/project.query'),
 mongoose = require('mongoose')
 
 function getProjects(req, res, next) {
-	dbquery.getAll((Projects) => {
-		res.status(200).json(Projects)
+	dbquery.getAll((projects) => {
+		res.status(200).json(projects)
 	})
 }
 
 function getProject(req, res, next) {
-	dbquery.findById(mongoose.Types.ObjectId(req.params.projectid), (Project) => {
-		res.status(200).json(Project.toClient())
+	dbquery.findById(mongoose.Types.ObjectId(req.params.projectid), (project) => {
+		res.status(200).json(project.toClient())
 	})
 }
 
 function addProject(req, res, next) {
 	dbquery.insertProject({
-		name: req.body.name, 
-		email: req.body.email
+		name: req.body.name
 	}, (data) => {
 		if (data.status != 200 ) return res.status(500).json(data.error)
 			

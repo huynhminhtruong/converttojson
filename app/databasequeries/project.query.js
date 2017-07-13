@@ -1,21 +1,21 @@
 const Project = require('../models/project.model')
 
 function getAll(next) {
-	Project.find({}).exec((error, Projects) => {
-		next(Projects)
+	Project.find({}).exec((error, projects) => {
+		next(projects)
 	})
 }
 
 function findById(id, next) {
-	Project.findById({ _id: id}).exec((error, Project) => {
-		next(Project)
+	Project.findById({ _id: id}).exec((error, project) => {
+		next(project)
 	})
 }
 
 function findByName(name, next) {
 	var nameRegExp = '/.*' + name + '.*/'
-	Project.find({ name: nameRegExp }).exec((error, Projects) => {
-		next(Projects)
+	Project.find({ name: nameRegExp }).exec((error, projects) => {
+		next(projects)
 	})
 }
 
@@ -25,10 +25,10 @@ function insertProject(data, next) {
 		email: data.email
 	})
 
-	Project.save((error, Project) => {
+	Project.save((error, project) => {
 		if (error) return next({ status: 304, error: error })
 
-		next({ status: 200, Project: Project.toClient() })
+		next({ status: 200, Project: project.toClient() })
 	})
 }
 
